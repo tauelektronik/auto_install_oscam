@@ -39,6 +39,31 @@ install_oscam_without_config() {
     echo "Ativando o serviço pcscd (suporte a smartcards)..."
     systemctl enable pcscd
     systemctl start pcscd
+
+########################################################################
+    echo "Criação do serviço systemd para o OSCam..."
+    cat <<EOF > /etc/systemd/system/oscam.service
+[Unit]
+Description=OSCam Service
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/oscam -b
+WorkingDirectory=/usr/local/bin
+User=root
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+    echo "Ativando o serviço OSCam..."
+    systemctl daemon-reload
+    systemctl enable oscam
+    systemctl start oscam
+
+    echo "OSCam foi instalado, movido para /usr/local/bin e o serviço está em execução."
+########################################################################
     
     echo "Instalação do OSCam finalizada sem copiar arquivos de configuração."
 }
