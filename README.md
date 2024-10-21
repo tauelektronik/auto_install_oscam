@@ -6,10 +6,10 @@ você pode usar o comando wget ou curl, que permite baixar um arquivo específic
 Aqui está como fazer isso:
 
 Usando wget: 
-wget https://raw.githubusercontent.com/tauelektronik/auto_oscam/master/install_oscam.sh
+wget https://raw.githubusercontent.com/tauelektronik/auto_install_oscam/master/install_oscam.sh
 
 Usando curl: 
-curl -O https://raw.githubusercontent.com/tauelektronik/auto_oscam/master/install_oscam.sh
+curl -O https://raw.githubusercontent.com/tauelektronik/auto_install_oscam/master/install_oscam.sh
 
 Esses comandos baixarão o arquivo install_oscam.sh diretamente para o diretório onde você está executando o comando.
 
