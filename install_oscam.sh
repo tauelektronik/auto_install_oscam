@@ -41,7 +41,7 @@ install_complete_oscam() {
     install_oscam_without_config
 
     echo "Baixando arquivos de configuração e o script restart-oscam.sh do repositório..."
-    git clone https://github.com/tauelektronik/auto_oscam.git /tmp/auto_oscam_temp
+    git clone https://github.com/tauelektronik/auto_install_oscam.git /tmp/auto_oscam_temp
     echo "Copiando arquivos de configuração para /usr/local/etc/..."
     cp -r /tmp/auto_oscam_temp/etc/* /usr/local/etc/
     echo "Movendo restart-oscam.sh para a raiz do Linux e dando permissão de execução..."
@@ -55,7 +55,7 @@ install_complete_oscam() {
 # Função para baixar apenas os scripts install_oscam.sh e restart-oscam.sh
 download_scripts_only() {
     echo "Baixando os scripts do repositório..."
-    git clone https://github.com/tauelektronik/auto_oscam.git /tmp/auto_oscam_temp
+    git clone https://github.com/tauelektronik/auto_install_oscam.git /tmp/auto_oscam_temp
     echo "Movendo restart-oscam.sh para a raiz do Linux e dando permissão de execução..."
     cp /tmp/auto_oscam_temp/restart-oscam.sh /restart-oscam.sh
     chmod +x /restart-oscam.sh
