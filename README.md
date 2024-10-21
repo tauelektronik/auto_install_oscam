@@ -21,3 +21,5 @@ Agora o script está pronto para ser executado!
 
 Para executa-lo: 
 ./install_oscam.sh
+
+Vai abrir com o endereço IP:8801
